@@ -82,7 +82,7 @@ module.exports = function (webpackEnv) {
       {
         loader: require.resolve("css-loader"),
         options: {
-          modules: { localIdentName: "[name]__[local]___[hash:base64:5]" },
+          modules: { localIdentName: "[name]__[local]___[hash:base64:5]" }
         },
       },
       {
@@ -430,8 +430,6 @@ module.exports = function (webpackEnv) {
             // By default we support CSS Modules with the extension .module.css
             {
               test: cssRegex,
-              use: ['style-loader',
-              'css-loader'],
               exclude: cssModuleRegex,
               use: getStyleLoaders({
                 importLoaders: 1,
