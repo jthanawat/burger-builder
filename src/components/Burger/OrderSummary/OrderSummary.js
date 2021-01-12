@@ -9,8 +9,6 @@ class OrderSummary extends Component {
 
   render() {
     const ingredientSummary = Object.keys(this.props.ingredients).map((igKey) => {
-      // console.log('ingredientSummary: ',Object.keys(this.props.ingredients))
-      // console.log('igKey: ',igKey)
       return (
         <li key={igKey}>
           <span style={{ textTransform: "capitalize" }}>{igKey}</span>:{" "}
@@ -28,7 +26,7 @@ class OrderSummary extends Component {
           <strong>Total Price: {this.props.price.toFixed(2)}</strong>
         </p>
         <p>Continue to Checkout?</p>
-        <Button btnType="Danger" clicked={this.props.purchaseCanceled}>
+        <Button btnType="Danger" clicked={this.props.purchaseCancelled}>
           CANCEL
         </Button>
         <Button btnType="Success" clicked={this.props.purchaseContinued}>
