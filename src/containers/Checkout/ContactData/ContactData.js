@@ -32,7 +32,9 @@ class ContactData extends Component {
       deliveryMethod: "fastest",
     };
     axios
-      .post("/orders", order)
+      .post("/orders", order, {
+        "Access-Control-Allow-Origin": '*'
+      })
       .then((response) => {
         console.log(response);
         this.setState({ loading: false });
